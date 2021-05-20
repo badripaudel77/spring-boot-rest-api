@@ -1,0 +1,17 @@
+Small social site like REST API design with following features include.
+
+1) User can register and login (for now I am skipping email verification and password reset )
+2) User can perform CRUD operation for his / her account.
+3) User can post a post with few details like (image url, title,etc.)
+4) User can follow and unfollow someone
+5) User can comment on post
+6) Ownership of post and comment will be given
+..... can be added later
+
+
+TECH STACKS :
+-------------
+JAVA, Spring Boot, Spring data JPA, MySQL, REST API,Maven etc.
+
+
+Run Project Using maven using @command  : mvn spring-boot:run
