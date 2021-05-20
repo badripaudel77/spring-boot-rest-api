@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {
-        logger.warn("coming user : ", user.getEmail());
+        logger.warn("creating user : ", user.getEmail());
         User user1 = userRepository.findByEmail(user.getEmail());
         if(user1!= null) {
            throw new RuntimeException("User Already Exists");
@@ -39,15 +39,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserByEmail(String email) {
+        if(email!=null) return userRepository.findByEmail(email);
+        else return null;
+    }
+
+    @Override
     public boolean deleteUser(int userId) {
         if(userId <= 0) return false;
         userRepository.deleteById(userId);
         return true;
-    }
-
-    @Override
-    public User getUserByEmail(String email) {
-        if(email!=null) return userRepository.findByEmail(email);
-        else return null;
     }
 }
