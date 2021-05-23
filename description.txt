@@ -12,6 +12,17 @@ Small social site like REST API design with following features include.
 TECH STACKS :
 -------------
 JAVA, Spring Boot, Spring data JPA, MySQL, REST API,Maven etc.
-
+--------------------------------------------------------------
 
 Run Project Using maven using @command  : mvn spring-boot:run
+
+------------------------------------------
+Documenting APIs using Swagger [Swagger 2]
+-------------------------------------------
+- Add the Swagger 2 dependency
+- Enable Swagger 2 using  @EanbleSwagger2 dependency in the root class (containing main class) or using configuration file
+
+Access using : baseURL/v2/api-docs [for json docs]
+
+Swagger-UI dependency [for html-ui docs]
+Access using : baseURL/swagger-ui.html [for HTML UI docs]

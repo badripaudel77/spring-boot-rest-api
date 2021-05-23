@@ -2,6 +2,7 @@ package io.social.rest.controllers;
 
 import io.social.rest.models.User;
 import io.social.rest.services.UserService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +23,11 @@ public class UserController {
     }
 
     @GetMapping("/")
+    //adding details to the rest endpoints swagger docs
+    @ApiOperation(value = "Find all contacts from the database.",
+            notes = "just provide the url and it will give you the response",
+            response = User.class
+    )
     public ArrayList<User> getAllPosts() {
         ArrayList<User> users = userService.listUser();
         return users;

@@ -1,5 +1,9 @@
 package io.social.rest.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
@@ -9,6 +13,7 @@ import java.util.Date;
     User has : user_id, email, password, joined_date, profile_pic
 */
 
+@ApiModel(description = "Details of the user")
 @Entity
 @Table(name = "users")
 public class User {
@@ -19,13 +24,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id")
+    @ApiModelProperty(notes = "Unique auto-incrementing id of the user")
     private int id;
 
     @NonNull
     @Column(name = "username")
+    @ApiModelProperty(notes = "Unique email of the user, can be thought of as username ")
     private String email;
 
     @NonNull
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) //exclude sensitive information
     @Column(name = "password")
     private String password;
 
@@ -44,7 +52,6 @@ public class User {
         this.email = email;
     }
 
-    @NonNull
     public String getPassword() {
         return password;
     }
