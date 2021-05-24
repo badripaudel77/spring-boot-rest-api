@@ -30,8 +30,6 @@ Access using : baseURL/v2/api-docs [for json docs]
 Swagger-UI dependency [for html-ui docs]
 Access using : baseURL/swagger-ui.html [for HTML UI docs]
 
-!ScreenShot[https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture1.PNG?raw=true]
-
-!ScreenShot[https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture2.PNG?raw=true]
-
-!ScreenShot[https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture3.PNG?raw=true]
+![ScreenShot](https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture1.PNG?raw=true)
+![ScreenShot](https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture2.PNG?raw=true)
+![ScreenShot](https://github.com/badripaudel77/spring-boot-rest-api/blob/main/images/Capture3.PNG?raw=true)
